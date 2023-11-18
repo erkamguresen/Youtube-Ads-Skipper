@@ -62,18 +62,18 @@
               <a
                 href="javascript: function skipAds() {
                 const video = document.querySelector('video');
-              
+                
                 const skipAdsButton = document.querySelector('.ytp-ad-skip-button-modern');
                 const smallAdsButton = document.querySelector('.ytp-ad-overlay-close-button');
-                const noSkipAdsButton = document.querySelector('.ytp-ad-preview-text');
-              
+                const noSkipAdsButton = document.querySelector('.ytp-ad-preview-slot'); 
+                
                 if (skipAdsButton) {
                   video.playbackRate = video.playbackRate != 1 ? 1 : 15;
-              
+                  
                   setTimeout(() => {
                     console.log('add skipped');
                   }, 50);
-              
+                  
                   skipAdsButton.click();
                 } else if (smallAdsButton) {
                   smallAdsButton.click();
