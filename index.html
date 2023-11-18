@@ -68,7 +68,7 @@
                 const noSkipAdsButton = document.querySelector('.ytp-ad-preview-text');
               
                 if (skipAdsButton) {
-                  video.playbackRate = video.playbackRate != 1 ? 1 : 20;
+                  video.playbackRate = video.playbackRate != 1 ? 1 : 15;
               
                   setTimeout(() => {
                     console.log('add skipped');
@@ -79,7 +79,7 @@
                   smallAdsButton.click();
                   console.log('small popup add skipped');
                 } else if (noSkipAdsButton) {
-                  video.playbackRate = video.playbackRate != 1 ? 1 : 20;
+                  video.playbackRate = video.playbackRate != 1 ? 1 : 15;
                   console.log('add played fast');
                 }
               }
