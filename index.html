@@ -66,6 +66,7 @@
                 const skipAdsButton = document.querySelector('.ytp-ad-skip-button-modern');
                 const smallAdsButton = document.querySelector('.ytp-ad-overlay-close-button');
                 const noSkipAdsButton = document.querySelector('.ytp-ad-preview-slot'); 
+                const skipButtonText = document.querySelector('.ytp-ad-skip-button-text');
                 
                 if (skipAdsButton) {
                   video.playbackRate = video.playbackRate != 1 ? 1 : 15;
@@ -81,6 +82,14 @@
                 } else if (noSkipAdsButton) {
                   video.playbackRate = video.playbackRate != 1 ? 1 : 15;
                   console.log('add played fast');
+                } else if (skipButtonText) {
+                  video.playbackRate = video.playbackRate != 1 ? 1 : 15;
+                  
+                  setTimeout(() => {
+                    console.log('add skipped');
+                  }, 50);
+                  
+                  skipButtonText.click();
                 }
               }
               
